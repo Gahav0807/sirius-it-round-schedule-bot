@@ -41,3 +41,324 @@
 2025-07-12 21:25:39,440 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:26:39 MSK)" executed successfully
 2025-07-12 21:26:36,774 [INFO] Polling stopped
 2025-07-12 21:26:37,041 [INFO] Polling stopped for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 21:30:03,319 [INFO] База данных инициализирована.
+2025-07-12 21:30:03,320 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 21:30:03,321 [INFO] Added job "partial" to job store "default"
+2025-07-12 21:30:03,321 [INFO] Scheduler started
+2025-07-12 21:30:03,321 [INFO] Планировщик напоминаний запущен.
+2025-07-12 21:30:03,321 [INFO] Бот запущен и ожидает команды.
+2025-07-12 21:30:03,322 [INFO] Start polling
+2025-07-12 21:30:03,563 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 21:30:08,981 [INFO] Update id=549372427 is handled. Duration 390 ms by bot id=8168734935
+2025-07-12 21:30:22,255 [INFO] Update id=549372428 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 21:30:30,691 [INFO] Update id=549372429 is handled. Duration 108 ms by bot id=8168734935
+2025-07-12 21:30:34,275 [INFO] Update id=549372430 is handled. Duration 141 ms by bot id=8168734935
+2025-07-12 21:30:39,845 [INFO] Update id=549372431 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 21:30:41,365 [INFO] Update id=549372432 is handled. Duration 108 ms by bot id=8168734935
+2025-07-12 21:30:51,846 [INFO] Пользователь 1573326142 добавил событие 'Контрольная' на 2025-07-11 14:00
+2025-07-12 21:30:51,961 [INFO] Update id=549372433 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 21:31:02,321 [INFO] Пользователь 1573326142 добавил событие 'Контрольная' на 2025-07-16 14:00
+2025-07-12 21:31:02,478 [INFO] Update id=549372434 is handled. Duration 156 ms by bot id=8168734935
+2025-07-12 21:31:03,335 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:32:03 MSK)" (scheduled at 2025-07-12 21:31:03.320201+03:00)
+2025-07-12 21:31:03,340 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:32:03 MSK)" executed successfully
+2025-07-12 21:31:06,775 [INFO] Update id=549372435 is handled. Duration 172 ms by bot id=8168734935
+2025-07-12 21:32:03,343 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:33:03 MSK)" (scheduled at 2025-07-12 21:32:03.320201+03:00)
+2025-07-12 21:32:03,347 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:33:03 MSK)" executed successfully
+2025-07-12 21:33:03,333 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:34:03 MSK)" (scheduled at 2025-07-12 21:33:03.320201+03:00)
+2025-07-12 21:33:03,336 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:34:03 MSK)" executed successfully
+2025-07-12 21:34:03,330 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:35:03 MSK)" (scheduled at 2025-07-12 21:34:03.320201+03:00)
+2025-07-12 21:34:03,332 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:35:03 MSK)" executed successfully
+2025-07-12 21:35:03,322 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:36:03 MSK)" (scheduled at 2025-07-12 21:35:03.320201+03:00)
+2025-07-12 21:35:03,325 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:36:03 MSK)" executed successfully
+2025-07-12 21:36:03,340 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:37:03 MSK)" (scheduled at 2025-07-12 21:36:03.320201+03:00)
+2025-07-12 21:36:03,341 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:37:03 MSK)" executed successfully
+2025-07-12 21:37:03,327 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:38:03 MSK)" (scheduled at 2025-07-12 21:37:03.320201+03:00)
+2025-07-12 21:37:03,329 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:38:03 MSK)" executed successfully
+2025-07-12 21:38:03,333 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:39:03 MSK)" (scheduled at 2025-07-12 21:38:03.320201+03:00)
+2025-07-12 21:38:03,335 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:39:03 MSK)" executed successfully
+2025-07-12 21:39:03,330 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:40:03 MSK)" (scheduled at 2025-07-12 21:39:03.320201+03:00)
+2025-07-12 21:39:03,333 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:40:03 MSK)" executed successfully
+2025-07-12 21:40:03,333 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:41:03 MSK)" (scheduled at 2025-07-12 21:40:03.320201+03:00)
+2025-07-12 21:40:03,337 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:41:03 MSK)" executed successfully
+2025-07-12 21:41:03,330 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:42:03 MSK)" (scheduled at 2025-07-12 21:41:03.320201+03:00)
+2025-07-12 21:41:03,333 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:42:03 MSK)" executed successfully
+2025-07-12 21:42:03,329 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:43:03 MSK)" (scheduled at 2025-07-12 21:42:03.320201+03:00)
+2025-07-12 21:42:03,332 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:43:03 MSK)" executed successfully
+2025-07-12 21:43:03,342 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:44:03 MSK)" (scheduled at 2025-07-12 21:43:03.320201+03:00)
+2025-07-12 21:43:03,343 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:44:03 MSK)" executed successfully
+2025-07-12 21:44:03,332 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:45:03 MSK)" (scheduled at 2025-07-12 21:44:03.320201+03:00)
+2025-07-12 21:44:03,335 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:45:03 MSK)" executed successfully
+2025-07-12 21:45:03,338 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:46:03 MSK)" (scheduled at 2025-07-12 21:45:03.320201+03:00)
+2025-07-12 21:45:03,341 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:46:03 MSK)" executed successfully
+2025-07-12 21:46:03,332 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:47:03 MSK)" (scheduled at 2025-07-12 21:46:03.320201+03:00)
+2025-07-12 21:46:03,334 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:47:03 MSK)" executed successfully
+2025-07-12 21:47:03,331 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:48:03 MSK)" (scheduled at 2025-07-12 21:47:03.320201+03:00)
+2025-07-12 21:47:03,333 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:48:03 MSK)" executed successfully
+2025-07-12 21:48:03,345 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:49:03 MSK)" (scheduled at 2025-07-12 21:48:03.320201+03:00)
+2025-07-12 21:48:03,347 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:49:03 MSK)" executed successfully
+2025-07-12 21:49:03,325 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:50:03 MSK)" (scheduled at 2025-07-12 21:49:03.320201+03:00)
+2025-07-12 21:49:03,327 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:50:03 MSK)" executed successfully
+2025-07-12 21:50:03,321 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:51:03 MSK)" (scheduled at 2025-07-12 21:50:03.320201+03:00)
+2025-07-12 21:50:03,323 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:51:03 MSK)" executed successfully
+2025-07-12 21:51:03,330 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:52:03 MSK)" (scheduled at 2025-07-12 21:51:03.320201+03:00)
+2025-07-12 21:51:03,332 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:52:03 MSK)" executed successfully
+2025-07-12 21:51:27,908 [INFO] База данных инициализирована.
+2025-07-12 21:51:27,909 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 21:51:27,910 [INFO] Added job "partial" to job store "default"
+2025-07-12 21:51:27,910 [INFO] Scheduler started
+2025-07-12 21:51:27,910 [INFO] Планировщик напоминаний запущен.
+2025-07-12 21:51:27,911 [INFO] Бот запущен и ожидает команды.
+2025-07-12 21:51:27,911 [INFO] Start polling
+2025-07-12 21:51:28,186 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 21:51:34,182 [INFO] Update id=549372436 is handled. Duration 328 ms by bot id=8168734935
+2025-07-12 21:51:41,532 [INFO] Update id=549372437 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 21:51:45,886 [INFO] Update id=549372438 is not handled. Duration 77 ms by bot id=8168734935
+2025-07-12 21:51:45,888 [ERROR] Cause exception while process update id=549372438 by bot id=8168734935
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unsupported start tag "минут" at byte offset 388
+Traceback (most recent call last):
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\duman\Desktop\sirius-tg-bot\bot.py", line 64, in help_cmd
+    await message.answer(HELP_TEXT)
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\duman\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unsupported start tag "минут" at byte offset 388
+2025-07-12 21:52:27,916 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:53:27 MSK)" (scheduled at 2025-07-12 21:52:27.909680+03:00)
+2025-07-12 21:52:27,919 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:53:27 MSK)" executed successfully
+2025-07-12 21:53:08,120 [INFO] Polling stopped
+2025-07-12 21:53:08,370 [INFO] Polling stopped for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 21:53:11,224 [INFO] База данных инициализирована.
+2025-07-12 21:53:11,225 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 21:53:11,226 [INFO] Added job "partial" to job store "default"
+2025-07-12 21:53:11,226 [INFO] Scheduler started
+2025-07-12 21:53:11,226 [INFO] Планировщик напоминаний запущен.
+2025-07-12 21:53:11,227 [INFO] Бот запущен и ожидает команды.
+2025-07-12 21:53:11,227 [INFO] Start polling
+2025-07-12 21:53:11,498 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 21:53:14,798 [INFO] Update id=549372439 is handled. Duration 313 ms by bot id=8168734935
+2025-07-12 21:53:25,938 [INFO] Update id=549372440 is handled. Duration 139 ms by bot id=8168734935
+2025-07-12 21:53:34,683 [INFO] Пользователь 1573326142 добавил событие 'Контрольная' на 2025-07-14 10:00 [учеба]
+2025-07-12 21:53:34,693 [INFO] Пользователь 1573326142 добавил событие 'Сдать лабу' на 2025-07-15 23:59 [важное]
+2025-07-12 21:53:34,720 [INFO] Пользователь 1573326142 добавил событие 'Пробежка' на 2025-07-16 08:00 [спорт]
+2025-07-12 21:53:34,834 [INFO] Update id=549372441 is handled. Duration 156 ms by bot id=8168734935
+2025-07-12 21:53:44,194 [INFO] Update id=549372442 is handled. Duration 203 ms by bot id=8168734935
+2025-07-12 21:53:56,315 [INFO] Update id=549372443 is handled. Duration 108 ms by bot id=8168734935
+2025-07-12 21:54:03,113 [INFO] Update id=549372444 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 21:54:09,555 [INFO] Update id=549372445 is handled. Duration 110 ms by bot id=8168734935
+2025-07-12 21:54:11,234 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:55:11 MSK)" (scheduled at 2025-07-12 21:54:11.225134+03:00)
+2025-07-12 21:54:11,237 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:55:11 MSK)" executed successfully
+2025-07-12 21:54:18,388 [INFO] Update id=549372446 is handled. Duration 108 ms by bot id=8168734935
+2025-07-12 21:54:20,282 [INFO] Update id=549372447 is handled. Duration 108 ms by bot id=8168734935
+2025-07-12 21:54:33,450 [INFO] Пользователь 1573326142 добавил событие 'Контрольная' на 2025-07-12 10:00 [учеба]
+2025-07-12 21:54:33,711 [INFO] Update id=549372448 is handled. Duration 266 ms by bot id=8168734935
+2025-07-12 21:54:43,616 [INFO] Update id=549372449 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 21:54:46,550 [INFO] Update id=549372450 is handled. Duration 110 ms by bot id=8168734935
+2025-07-12 21:55:11,239 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:56:11 MSK)" (scheduled at 2025-07-12 21:55:11.225134+03:00)
+2025-07-12 21:55:11,242 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:56:11 MSK)" executed successfully
+2025-07-12 21:56:11,228 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:57:11 MSK)" (scheduled at 2025-07-12 21:56:11.225134+03:00)
+2025-07-12 21:56:11,231 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:57:11 MSK)" executed successfully
+2025-07-12 21:57:04,402 [INFO] Пользователь 1573326142 добавил событие 'Контрольная' на 2025-07-16 10:00 [учеба]
+2025-07-12 21:57:04,534 [INFO] Update id=549372451 is handled. Duration 139 ms by bot id=8168734935
+2025-07-12 21:57:08,210 [INFO] Пользователь 1573326142 добавил событие 'Контрольная' на 2025-07-2 10:00 [учеба]
+2025-07-12 21:57:08,346 [INFO] Update id=549372452 is handled. Duration 156 ms by bot id=8168734935
+2025-07-12 21:57:11,235 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:58:11 MSK)" (scheduled at 2025-07-12 21:57:11.225134+03:00)
+2025-07-12 21:57:11,238 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:58:11 MSK)" executed successfully
+2025-07-12 21:58:13,697 [INFO] База данных инициализирована.
+2025-07-12 21:58:13,698 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 21:58:13,698 [INFO] Added job "partial" to job store "default"
+2025-07-12 21:58:13,699 [INFO] Scheduler started
+2025-07-12 21:58:13,699 [INFO] Планировщик напоминаний запущен.
+2025-07-12 21:58:13,700 [INFO] Бот запущен и ожидает команды.
+2025-07-12 21:58:13,700 [INFO] Start polling
+2025-07-12 21:58:13,988 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 21:58:19,923 [WARNING] Ошибка валидации команды /add: Нельзя добавлять событие в прошлом.
+2025-07-12 21:58:20,241 [INFO] Update id=549372453 is handled. Duration 327 ms by bot id=8168734935
+2025-07-12 21:59:13,705 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:00:13 MSK)" (scheduled at 2025-07-12 21:59:13.698164+03:00)
+2025-07-12 21:59:13,708 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:00:13 MSK)" executed successfully
+2025-07-12 22:00:13,707 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:01:13 MSK)" (scheduled at 2025-07-12 22:00:13.698164+03:00)
+2025-07-12 22:00:13,710 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:01:13 MSK)" executed successfully
+2025-07-12 22:01:13,718 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:02:13 MSK)" (scheduled at 2025-07-12 22:01:13.698164+03:00)
+2025-07-12 22:01:13,721 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:02:13 MSK)" executed successfully
+2025-07-12 22:02:13,714 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:03:13 MSK)" (scheduled at 2025-07-12 22:02:13.698164+03:00)
+2025-07-12 22:02:13,718 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:03:13 MSK)" executed successfully
+2025-07-12 22:03:16,197 [INFO] База данных инициализирована.
+2025-07-12 22:03:16,197 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 22:03:16,198 [INFO] Added job "partial" to job store "default"
+2025-07-12 22:03:16,198 [INFO] Scheduler started
+2025-07-12 22:03:16,198 [INFO] Планировщик напоминаний запущен.
+2025-07-12 22:03:16,198 [INFO] Бот запущен и ожидает команды.
+2025-07-12 22:03:16,198 [INFO] Start polling
+2025-07-12 22:03:16,474 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:03:47,292 [INFO] Update id=549372454 is handled. Duration 297 ms by bot id=8168734935
+2025-07-12 22:03:48,828 [INFO] Update id=549372455 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 22:03:59,895 [WARNING] Ошибка валидации команды /add: Нельзя добавлять событие в прошлом.
+2025-07-12 22:04:00,022 [INFO] Update id=549372456 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 22:04:16,213 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:05:16 MSK)" (scheduled at 2025-07-12 22:04:16.197430+03:00)
+2025-07-12 22:04:16,217 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:05:16 MSK)" executed successfully
+2025-07-12 22:04:18,189 [INFO] Update id=549372457 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 22:04:21,841 [INFO] Update id=549372458 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 22:05:02,573 [INFO] Update id=549372459 is handled. Duration 281 ms by bot id=8168734935
+2025-07-12 22:05:16,203 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:06:16 MSK)" (scheduled at 2025-07-12 22:05:16.197430+03:00)
+2025-07-12 22:05:16,206 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:06:16 MSK)" executed successfully
+2025-07-12 22:05:36,332 [INFO] База данных инициализирована.
+2025-07-12 22:05:36,333 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 22:05:36,334 [INFO] Added job "partial" to job store "default"
+2025-07-12 22:05:36,334 [INFO] Scheduler started
+2025-07-12 22:05:36,335 [INFO] Планировщик напоминаний запущен.
+2025-07-12 22:05:36,335 [INFO] Бот запущен и ожидает команды.
+2025-07-12 22:05:36,336 [INFO] Start polling
+2025-07-12 22:05:36,600 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:05:39,044 [INFO] Update id=549372460 is handled. Duration 1827 ms by bot id=8168734935
+2025-07-12 22:06:22,773 [INFO] База данных инициализирована.
+2025-07-12 22:06:22,775 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 22:06:22,775 [INFO] Added job "partial" to job store "default"
+2025-07-12 22:06:22,776 [INFO] Scheduler started
+2025-07-12 22:06:22,776 [INFO] Планировщик напоминаний запущен.
+2025-07-12 22:06:22,777 [INFO] Бот запущен и ожидает команды.
+2025-07-12 22:06:22,777 [INFO] Start polling
+2025-07-12 22:06:23,066 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:06:24,111 [INFO] Update id=549372461 is handled. Duration 936 ms by bot id=8168734935
+2025-07-12 22:07:15,703 [INFO] База данных инициализирована.
+2025-07-12 22:07:15,704 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 22:07:15,705 [INFO] Added job "partial" to job store "default"
+2025-07-12 22:07:15,705 [INFO] Scheduler started
+2025-07-12 22:07:15,706 [INFO] Планировщик напоминаний запущен.
+2025-07-12 22:07:15,706 [INFO] Бот запущен и ожидает команды.
+2025-07-12 22:07:15,706 [INFO] Start polling
+2025-07-12 22:07:15,982 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:07:16,402 [INFO] Update id=549372462 is handled. Duration 328 ms by bot id=8168734935
+2025-07-12 22:08:15,718 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:09:15 MSK)" (scheduled at 2025-07-12 22:08:15.704477+03:00)
+2025-07-12 22:08:15,720 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:09:15 MSK)" executed successfully
+2025-07-12 22:09:02,965 [INFO] База данных инициализирована.
+2025-07-12 22:09:02,966 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 22:09:02,967 [INFO] Added job "partial" to job store "default"
+2025-07-12 22:09:02,967 [INFO] Scheduler started
+2025-07-12 22:09:02,967 [INFO] Планировщик напоминаний запущен.
+2025-07-12 22:09:02,967 [INFO] Бот запущен и ожидает команды.
+2025-07-12 22:09:02,968 [INFO] Start polling
+2025-07-12 22:09:03,237 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:09:05,758 [ERROR] Ошибка в команде /week: Telegram server says - Bad Request: can't parse entities: Unsupported start tag "id" at byte offset 546
+2025-07-12 22:09:05,759 [INFO] Update id=549372463 is handled. Duration 281 ms by bot id=8168734935
+2025-07-12 22:09:55,156 [INFO] Polling stopped
+2025-07-12 22:09:55,420 [INFO] Polling stopped for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:09:58,988 [INFO] База данных инициализирована.
+2025-07-12 22:09:58,988 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 22:09:58,989 [INFO] Added job "partial" to job store "default"
+2025-07-12 22:09:58,989 [INFO] Scheduler started
+2025-07-12 22:09:58,989 [INFO] Планировщик напоминаний запущен.
+2025-07-12 22:09:58,990 [INFO] Бот запущен и ожидает команды.
+2025-07-12 22:09:58,990 [INFO] Start polling
+2025-07-12 22:09:59,271 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:09:59,923 [INFO] Update id=549372464 is handled. Duration 313 ms by bot id=8168734935
+2025-07-12 22:10:51,401 [INFO] Update id=549372465 is handled. Duration 110 ms by bot id=8168734935
+2025-07-12 22:10:56,422 [INFO] Update id=549372466 is handled. Duration 235 ms by bot id=8168734935
+2025-07-12 22:10:59,001 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:11:58 MSK)" (scheduled at 2025-07-12 22:10:58.988253+03:00)
+2025-07-12 22:10:59,005 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:11:58 MSK)" executed successfully
+2025-07-12 22:11:12,680 [INFO] База данных инициализирована.
+2025-07-12 22:11:12,681 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 22:11:12,682 [INFO] Added job "partial" to job store "default"
+2025-07-12 22:11:12,682 [INFO] Scheduler started
+2025-07-12 22:11:12,682 [INFO] Планировщик напоминаний запущен.
+2025-07-12 22:11:12,683 [INFO] Бот запущен и ожидает команды.
+2025-07-12 22:11:12,683 [INFO] Start polling
+2025-07-12 22:11:12,940 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:11:13,353 [INFO] Update id=549372467 is handled. Duration 296 ms by bot id=8168734935
+2025-07-12 22:12:12,688 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:13:12 MSK)" (scheduled at 2025-07-12 22:12:12.681117+03:00)
+2025-07-12 22:12:12,691 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:13:12 MSK)" executed successfully
+2025-07-12 22:13:02,242 [INFO] База данных инициализирована.
+2025-07-12 22:13:02,243 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 22:13:02,243 [INFO] Added job "partial" to job store "default"
+2025-07-12 22:13:02,244 [INFO] Scheduler started
+2025-07-12 22:13:02,244 [INFO] Планировщик напоминаний запущен.
+2025-07-12 22:13:02,244 [INFO] Бот запущен и ожидает команды.
+2025-07-12 22:13:02,244 [INFO] Start polling
+2025-07-12 22:13:02,512 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:13:10,237 [INFO] Update id=549372468 is handled. Duration 280 ms by bot id=8168734935
+2025-07-12 22:13:23,636 [INFO] Update id=549372469 is handled. Duration 141 ms by bot id=8168734935
+2025-07-12 22:14:02,261 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:15:02 MSK)" (scheduled at 2025-07-12 22:14:02.243046+03:00)
+2025-07-12 22:14:02,264 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:15:02 MSK)" executed successfully
+2025-07-12 22:15:02,248 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:16:02 MSK)" (scheduled at 2025-07-12 22:15:02.243046+03:00)
+2025-07-12 22:15:02,251 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:16:02 MSK)" executed successfully
+2025-07-12 22:15:20,189 [INFO] База данных инициализирована.
+2025-07-12 22:15:20,190 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 22:15:20,191 [INFO] Added job "partial" to job store "default"
+2025-07-12 22:15:20,191 [INFO] Scheduler started
+2025-07-12 22:15:20,191 [INFO] Планировщик напоминаний запущен.
+2025-07-12 22:15:20,192 [INFO] Бот запущен и ожидает команды.
+2025-07-12 22:15:20,192 [INFO] Start polling
+2025-07-12 22:15:20,480 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:15:52,881 [INFO] База данных инициализирована.
+2025-07-12 22:15:52,882 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 22:15:52,882 [INFO] Added job "partial" to job store "default"
+2025-07-12 22:15:52,883 [INFO] Scheduler started
+2025-07-12 22:15:52,883 [INFO] Планировщик напоминаний запущен.
+2025-07-12 22:15:52,883 [INFO] Бот запущен и ожидает команды.
+2025-07-12 22:15:52,883 [INFO] Start polling
+2025-07-12 22:15:53,202 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 22:15:55,754 [INFO] Update id=549372470 is handled. Duration 343 ms by bot id=8168734935
+2025-07-12 22:16:03,912 [INFO] Update id=549372471 is handled. Duration 218 ms by bot id=8168734935
+2025-07-12 22:16:05,611 [INFO] Update id=549372472 is handled. Duration 186 ms by bot id=8168734935
+2025-07-12 22:16:52,896 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:17:52 MSK)" (scheduled at 2025-07-12 22:16:52.882724+03:00)
+2025-07-12 22:16:52,898 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 22:17:52 MSK)" executed successfully
+2025-07-12 22:16:52,952 [INFO] Update id=549372473 is handled. Duration 93 ms by bot id=8168734935
+2025-07-12 22:17:01,281 [WARNING] Ошибка валидации команды /add: Нельзя добавлять событие в прошлом.
+2025-07-12 22:17:01,494 [INFO] Update id=549372474 is handled. Duration 217 ms by bot id=8168734935
+2025-07-12 22:17:10,912 [INFO] Update id=549372475 is handled. Duration 187 ms by bot id=8168734935

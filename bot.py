@@ -1,133 +1,228 @@
-import asyncio
+import logging
+from datetime import datetime, timedelta
+from typing import Final
 from aiogram import Router, types
 from aiogram.filters.command import Command
-from datetime import datetime, timedelta
-from db import add_event, get_events_for_date
-from typing import Final
-import logging
+from db import (
+    add_event, set_notifications_enabled, get_notifications_enabled,
+    set_remind_before, get_remind_before, delete_event, get_events_for_date_with_id
+)
 
 router = Router()
 
-# Сообщения-ответы
+TAG_COLORS = {
+    "учеба": "🟦",
+    "досуг": "🟩",
+    "спорт": "🟧",
+    "важное": "🟥",
+}
+TAG_LABELS = {
+    "учеба": "учёба",
+    "досуг": "досуг",
+    "спорт": "спорт",
+    "важное": "важное",
+}
+
 ABOUT_TEXT: Final[str] = (
     "Бот для ведения личного расписания и напоминаний. Разработан для учебного проекта IT-Round.\n"
-    "Исходный код с инструкцией по запуску: https://github.com/Gahav0807/sirius-it-round-schedule-bot\n\n"
-    "Для получения списка команд: /help"
-)
-HELP_TEXT: Final[str] = (
-    "🧭 Доступные команды:\n"
-    "/today — расписание на сегодня\n"
-    "/tomorrow — на завтра\n"
-    "/week — на неделю\n"
-    "/add Название Дата Время — добавить событие\n"
-    "/schedule — пример добавления события\n"
-)
-SCHEDULE_EXAMPLE: Final[str] = "Пример: /add Контрольная 2025-07-11 14:00"
-ADD_FORMAT_ERROR: Final[str] = (
-    "❗ Формат команды: /add Название 2025-07-11 14:00\nПример: /add Контрольная 2025-07-11 14:00"
+    "Исходный код с инструкцией по запуску: https://github.com/Gahav0807/sirius-it-round-schedule-bot\n"
+    "Для справки используйте команду /help"
 )
 NO_EVENTS_TODAY: Final[str] = "📭 Сегодня у вас нет событий."
 NO_EVENTS_TOMORROW: Final[str] = "📭 Завтра у вас нет событий."
 NO_EVENTS_WEEK: Final[str] = "📭 На этой неделе у вас нет событий."
 UNKNOWN_COMMAND: Final[str] = "❓ Неизвестная команда. Используйте /help для списка команд."
 ONLY_COMMANDS: Final[str] = "Я понимаю только команды. Для справки — /help."
+DELETE_HINT: Final[str] = "<b>Чтобы удалить событие, используйте: /delete [id] (например: /delete 12)</b>"
+DELETE_USAGE: Final[str] = "Используйте: /delete [id] (id можно узнать в списке событий)"
+DELETE_OK: Final[str] = "🗑️ Событие #{id} удалено."
+DELETE_FAIL: Final[str] = "Ошибка удаления или нет доступа к событию."
+NOTIFY_ON: Final[str] = "🔔 Напоминания включены. Чтобы отключить — /notify off"
+NOTIFY_OFF: Final[str] = "🔕 Напоминания отключены. Чтобы включить — /notify on"
+NOTIFY_USAGE: Final[str] = "Используйте /notify on или /notify off"
+REMIND_STATUS: Final[str] = "⏰ Сейчас напоминания приходят за {minutes} мин. до события.\nИзменить: /remind N"
+REMIND_OK: Final[str] = "⏰ Теперь напоминания будут приходить за {minutes} мин. до события."
+REMIND_FAIL: Final[str] = "Введите число минут от 1 до 1440. Пример: /remind 30"
+ADD_FORMAT_ERROR: Final[str] = "❗ Формат команды: /add Название YYYY-MM-DD HH:MM [тег]\nОшибка: {error}"
+ADD_UNKNOWN_ERROR: Final[str] = "❗ Ошибка. Проверьте формат команды."
+ADD_PAST_ERROR: Final[str] = "Нельзя добавлять событие в прошлом."
+ADD_TITLE_ERROR: Final[str] = "Укажите название события."
+ADD_DATA_ERROR: Final[str] = "Недостаточно данных"
 
-# Ответ на команду /start
+@router.message(Command("help"))
+async def help_cmd(message: types.Message) -> None:
+    today = datetime.now().strftime("%Y-%m-%d")
+    help_text = (
+        "🧭 Доступные команды:\n"
+        "/today — расписание на сегодня\n"
+        "/tomorrow — на завтра\n"
+        "/week — на неделю\n"
+        f"/add Название Дата Время [тег] — добавить событие (например: /add Встреча {today} 18:00 досуг)\n"
+        "/schedule — пример добавления события\n"
+        "/notify on|off — включить/отключить напоминания\n"
+        "/remind N — за сколько минут до события напоминать\n"
+        "/about — информация о проекте"
+        "\n\n🎨 Поддерживаются теги: учеба, досуг, спорт, важное (цветовая маркировка)."
+    )
+    await message.answer(help_text)
+
 @router.message(Command("start"))
 async def about_cmd(message: types.Message) -> None:
     await message.answer(ABOUT_TEXT)
 
-# Ответ на команду /help
-@router.message(Command("help"))
-async def help_cmd(message: types.Message) -> None:
-    await message.answer(HELP_TEXT)
-
-# Пример добавления события
 @router.message(Command("schedule"))
 async def schedule_info(message: types.Message) -> None:
-    await message.answer(SCHEDULE_EXAMPLE)
+    today = datetime.now().strftime("%Y-%m-%d")
+    tomorrow = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
+    after_tomorrow = (datetime.now() + timedelta(days=2)).strftime("%Y-%m-%d")
+    schedule_text = (
+        "Пример добавления события:\n"
+        f"/add Встреча {today} 18:00 досуг\n\n"
+    )
+    await message.answer(schedule_text)
 
-# Добавление события через /add
 @router.message(Command("add"))
 async def add_cmd(message: types.Message) -> None:
+    user_id = message.from_user.id
+    text = message.text
     try:
-        _, content = message.text.split(maxsplit=1)
-        title, date_str, time_str = content.rsplit(" ", 2)
+        _, content = text.split(maxsplit=1)
+        parts = content.strip().split()
+        if len(parts) < 3:
+            raise ValueError(ADD_DATA_ERROR)
+        tag = ""
+        if len(parts) >= 4 and parts[-1].lower() in TAG_COLORS:
+            tag = parts[-1].lower()
+            time_str = parts[-2]
+            date_str = parts[-3]
+            title = " ".join(parts[:-3])
+        else:
+            time_str = parts[-1]
+            date_str = parts[-2]
+            title = " ".join(parts[:-2])
         if not title.strip():
-            raise ValueError("Укажите название события.")
-
-        # Преобразуем дату и время в datetime-объект
-        event_datetime = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M")
-        now = datetime.now()
-
-        # Проверка: нельзя добавлять событие в прошлом
-        if event_datetime < now:
-            raise ValueError("Нельзя добавлять событие в прошлом.")
-
+            raise ValueError(ADD_TITLE_ERROR)
+        dt = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M")
+        if dt < datetime.now():
+            raise ValueError(ADD_PAST_ERROR)
     except ValueError as e:
         logging.warning(f"Ошибка валидации команды /add: {e}")
-        return await message.answer(
-            f"❗ Формат команды: /add Название 2025-07-11 14:00\nОшибка: {e}" if str(e) else ADD_FORMAT_ERROR
-        )
+        return await message.answer(ADD_FORMAT_ERROR.format(error=e))
     except Exception as e:
         logging.error(f"Неизвестная ошибка в команде /add: {e}")
-        return await message.answer(ADD_FORMAT_ERROR)
+        return await message.answer(ADD_UNKNOWN_ERROR)
+    await add_event(user_id, title.strip(), date_str, time_str, tag)
+    color = TAG_COLORS.get(tag, "")
+    tag_label = f" [{TAG_LABELS[tag]}]" if tag else ""
+    await message.answer(f"{color} {title.strip()} — {dt.strftime('%d.%m.%Y')}, {time_str}{tag_label}")
 
-    await add_event(message.from_user.id, title.strip(), date_str, time_str)
-    logging.info(f"Пользователь {message.from_user.id} добавил событие '{title.strip()}' на {date_str} {time_str}")
-    await message.answer(f"✅ Событие «{title.strip()}» добавлено на {date_str} в {time_str}.")
-    
-# События на сегодня
 @router.message(Command("today"))
 async def today_cmd(message: types.Message) -> None:
     try:
         date_str = datetime.now().strftime("%Y-%m-%d")
-        events = await get_events_for_date(date_str, message.from_user.id)
+        events = await get_events_for_date_with_id(date_str, message.from_user.id)
         if not events:
             await message.answer(NO_EVENTS_TODAY)
         else:
-            text = f"📅 Сегодня ({date_str}):\n" + "\n".join([f"🕒 {t} — {title}" for title, t in events])
-            await message.answer(text)
+            text = "\n".join([
+                f"#{event_id} {TAG_COLORS.get(tag, '')} {t} — {title}{f' [{TAG_LABELS[tag]}]' if tag else ''}" for event_id, title, t, tag in events
+            ])
+            text += f"\n\n{DELETE_HINT}"
+            await message.answer(f"📅 Сегодня ({date_str}):\n" + text, parse_mode="HTML")
     except Exception as e:
         logging.error(f"Ошибка в команде /today: {e}")
 
-# События на завтра
 @router.message(Command("tomorrow"))
 async def tomorrow_cmd(message: types.Message) -> None:
     try:
         date_str = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
-        events = await get_events_for_date(date_str, message.from_user.id)
+        events = await get_events_for_date_with_id(date_str, message.from_user.id)
         if not events:
             await message.answer(NO_EVENTS_TOMORROW)
         else:
-            text = f"📅 Завтра ({date_str}):\n" + "\n".join([f"🕒 {t} — {title}" for title, t in events])
-            await message.answer(text)
+            text = "\n".join([
+                f"#{event_id} {TAG_COLORS.get(tag, '')} {t} — {title}{f' [{TAG_LABELS[tag]}]' if tag else ''}" for event_id, title, t, tag in events
+            ])
+            text += f"\n\n{DELETE_HINT}"
+            await message.answer(f"📅 Завтра ({date_str}):\n" + text, parse_mode="HTML")
     except Exception as e:
         logging.error(f"Ошибка в команде /tomorrow: {e}")
 
-# События на неделю
 @router.message(Command("week"))
 async def week_cmd(message: types.Message) -> None:
     try:
         today = datetime.now()
-        text = "📆 События на неделю:\n"
         found = False
+        week_text = "📆 События на неделю:\n"
         for i in range(7):
             d = today + timedelta(days=i)
             date_str = d.strftime("%Y-%m-%d")
-            events = await get_events_for_date(date_str, message.from_user.id)
+            events = await get_events_for_date_with_id(date_str, message.from_user.id)
             if events:
                 found = True
-                text += f"\n📅 {d.strftime('%A %d.%m')}:\n"
-                text += "\n".join([f"  🕒 {t} — {title}" for title, t in events]) + "\n"
+                day_text = f"\n📅 {d.strftime('%A %d.%m')}:\n" + "\n".join([
+                    f"#{event_id} {TAG_COLORS.get(tag, '')} {t} — {title}{f' [{TAG_LABELS[tag]}]' if tag else ''}" for event_id, title, t, tag in events
+                ])
+                week_text += day_text + "\n"
         if not found:
             await message.answer(NO_EVENTS_WEEK)
         else:
-            await message.answer(text)
+            week_text += f"\n{DELETE_HINT}"
+            await message.answer(week_text, parse_mode="HTML")
     except Exception as e:
         logging.error(f"Ошибка в команде /week: {e}")
 
-# Ответ на неизвестную команду или текст
+@router.message(Command("delete"))
+async def delete_cmd(message: types.Message) -> None:
+    user_id = message.from_user.id
+    args = message.text.split()
+    if len(args) != 2 or not args[1].isdigit():
+        await message.answer(DELETE_USAGE)
+        return
+    event_id = int(args[1])
+    ok = await delete_event(event_id, user_id)
+    if ok:
+        await message.answer(DELETE_OK.format(id=event_id))
+    else:
+        await message.answer(DELETE_FAIL)
+
+@router.message(Command("notify"))
+async def notify_cmd(message: types.Message) -> None:
+    user_id = message.from_user.id
+    args = message.text.split()
+    if len(args) == 1:
+        enabled = await get_notifications_enabled(user_id)
+        if enabled:
+            await message.answer(NOTIFY_ON)
+        else:
+            await message.answer(NOTIFY_OFF)
+        return
+    if args[1].lower() == "on":
+        await set_notifications_enabled(user_id, True)
+        await message.answer(NOTIFY_ON)
+    elif args[1].lower() == "off":
+        await set_notifications_enabled(user_id, False)
+        await message.answer(NOTIFY_OFF)
+    else:
+        await message.answer(NOTIFY_USAGE)
+
+@router.message(Command("remind"))
+async def remind_cmd(message: types.Message) -> None:
+    user_id = message.from_user.id
+    args = message.text.split()
+    if len(args) == 1:
+        minutes = await get_remind_before(user_id)
+        await message.answer(REMIND_STATUS.format(minutes=minutes))
+        return
+    try:
+        minutes = int(args[1])
+        if not (1 <= minutes <= 1440):
+            raise ValueError
+        await set_remind_before(user_id, minutes)
+        await message.answer(REMIND_OK.format(minutes=minutes))
+    except Exception:
+        await message.answer(REMIND_FAIL)
+
 @router.message()
 async def unknown_cmd(message: types.Message) -> None:
     if message.text and message.text.startswith("/"):
