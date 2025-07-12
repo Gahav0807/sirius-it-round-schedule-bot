@@ -12,7 +12,7 @@ router = Router()
 async def about_cmd(message: types.Message):
     await message.answer(
         "Бот для ведения личного расписания и напоминаний. Разработан для учебного проекта IT-Round.\n"
-        "Исходный код с инструкцией по установке: https://github.com/Gahav0807/sirius-it-round-schedule-bot\n"
+        "Исходный код с инструкцией по запуску: https://github.com/Gahav0807/sirius-it-round-schedule-bot\n"
         "Для справки используйте команду /help"
     )
 
@@ -35,55 +35,36 @@ async def help_cmd(message: types.Message):
 async def schedule_info(message: types.Message):
     await message.answer("Пример: /add Контрольная 2025-07-11 14:00")
 
-# Команда /add — строгое добавление события
+# Команда /add — добавление кастомного события
 @router.message(Command("add"))
 async def add_cmd(message: types.Message):
     """
-    Добавляет событие. Ожидает формат: /add Название 2025-07-11 14:00
+    Добавляет событие. Формат: /add Название 2025-07-11 14:00
     """
-    args = message.text.split(maxsplit=1)
-    if len(args) < 2 or not args[1].strip():
-        return await message.answer(
-            "❗ Формат команды: /add Название 2025-07-11 14:00\n"
-            "Пример: /add Контрольная 2025-07-11 14:00"
-        )
-
-    content = args[1].strip()
-    # Разделяем с конца: название может содержать пробелы
-    parts = content.rsplit(" ", 2)
-    if len(parts) != 3:
-        return await message.answer(
-            "❗ Формат команды: /add Название 2025-07-11 14:00\n"
-            "Пример: /add Контрольная 2025-07-11 14:00"
-        )
-    title, date_str, time_str = parts
-
-    # Проверка названия
-    if not title.strip():
-        return await message.answer("❗ Укажите название события (не пустое).")
-
-    # Проверка формата даты
     from datetime import datetime
+
     try:
+        _, content = message.text.split(maxsplit=1)
+        title, date_str, time_str = content.rsplit(" ", 2)
+
+        # Валидация
+        if not title.strip():
+            raise ValueError("Укажите название события.")
         datetime.strptime(date_str, "%Y-%m-%d")
-    except ValueError:
-        return await message.answer(
-            "❗ Дата должна быть в формате ГГГГ-ММ-ДД (например, 2025-07-11)."
-        )
-
-    # Проверка формата времени
-    try:
         datetime.strptime(time_str, "%H:%M")
-    except ValueError:
+
+    except ValueError as e:
         return await message.answer(
-            "❗ Время должно быть в формате ЧЧ:ММ (например, 14:00)."
+            "❗ Формат команды: /add Название 2025-07-11 14:00\n"
+            f"{'Ошибка: ' + str(e) if str(e) else 'Пример: /add Контрольная 2025-07-11 14:00'}"
+        )
+    except Exception:
+        return await message.answer(
+            "❗ Неверный формат. Пример: /add Контрольная 2025-07-11 14:00"
         )
 
-    # Всё ок — добавляем событие
     await add_event(message.from_user.id, title.strip(), date_str, time_str)
-    await message.answer(
-        f"✅ Событие «{title.strip()}» добавлено на {date_str} в {time_str}."
-    )
+    await message.answer(f"✅ Событие «{title.strip()}» добавлено на {date_str} в {time_str}.")
 
 # Команда /today — события на сегодня
 @router.message(Command("today"))
