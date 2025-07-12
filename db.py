@@ -160,12 +160,54 @@ async def get_events_for_date(date: str, user_id: int) -> List[Tuple[str, str, s
         logging.error(f"Ошибка получения событий на дату: {e}")
         return []
 
-# Получить все события пользователя на дату (с id)
-async def get_events_for_date_with_id(date: str, user_id: int) -> List[Tuple[int, str, str, str]]:
+# --- ДОБАВЛЯЕМ ПОЛЕ status В ТАБЛИЦУ events ---
+async def migrate_add_status_to_events():
+    try:
+        async with aiosqlite.connect(DB_NAME) as db:
+            try:
+                await db.execute("ALTER TABLE events ADD COLUMN status TEXT DEFAULT 'active'")
+                await db.commit()
+                logging.info("Поле status добавлено в таблицу events.")
+            except Exception:
+                pass  # Уже добавлено
+    except Exception as e:
+        logging.error(f"Ошибка миграции поля status: {e}")
+
+# --- УСТАНОВИТЬ СТАТУС ЗАДАЧИ ---
+async def set_event_status(event_id: int, user_id: int, status: str) -> bool:
+    try:
+        async with aiosqlite.connect(DB_NAME) as db:
+            await db.execute(
+                "UPDATE events SET status=? WHERE id=? AND user_id=?",
+                (status, event_id, user_id)
+            )
+            await db.commit()
+            return True
+    except Exception as e:
+        logging.error(f"Ошибка установки статуса задачи: {e}")
+        return False
+
+# --- ПОЛУЧИТЬ СТАТУС ЗАДАЧИ ---
+async def get_event_status(event_id: int, user_id: int) -> str:
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             cursor = await db.execute(
-                "SELECT id, title, time, tag FROM events WHERE date=? AND user_id=? ORDER BY time",
+                "SELECT status FROM events WHERE id=? AND user_id=?",
+                (event_id, user_id)
+            )
+            row = await cursor.fetchone()
+            return row[0] if row else 'active'
+    except Exception as e:
+        logging.error(f"Ошибка получения статуса задачи: {e}")
+        return 'active'
+
+# --- ОБНОВЛЯЕМ ВЫБОРКИ: ДОБАВЛЯЕМ status ---
+# Получить все события пользователя на дату (с id)
+async def get_events_for_date_with_id(date: str, user_id: int) -> List[Tuple[int, str, str, str, str]]:
+    try:
+        async with aiosqlite.connect(DB_NAME) as db:
+            cursor = await db.execute(
+                "SELECT id, title, time, tag, status FROM events WHERE date=? AND user_id=? ORDER BY time",
                 (date, user_id)
             )
             rows = await cursor.fetchall()
@@ -187,3 +229,17 @@ async def delete_event(event_id: int, user_id: int) -> bool:
     except Exception as e:
         logging.error(f"Ошибка удаления события: {e}")
         return False
+
+# Получить все события пользователя за всё время (с id)
+async def get_all_events_for_user(user_id: int) -> List[Tuple[int, str, str, str, str, str]]:
+    try:
+        async with aiosqlite.connect(DB_NAME) as db:
+            cursor = await db.execute(
+                "SELECT id, title, date, time, tag, status FROM events WHERE user_id=? ORDER BY date, time",
+                (user_id,)
+            )
+            rows = await cursor.fetchall()
+            return list(map(tuple, rows))
+    except Exception as e:
+        logging.error(f"Ошибка получения всех событий пользователя: {e}")
+        return []
