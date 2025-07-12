@@ -1,0 +1,43 @@
+2025-07-12 21:20:04,998 [INFO] База данных инициализирована.
+2025-07-12 21:20:04,998 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 21:20:04,999 [INFO] Added job "partial" to job store "default"
+2025-07-12 21:20:04,999 [INFO] Scheduler started
+2025-07-12 21:20:05,000 [INFO] Планировщик напоминаний запущен.
+2025-07-12 21:20:05,000 [INFO] Бот запущен и ожидает команды.
+2025-07-12 21:20:05,000 [INFO] Start polling
+2025-07-12 21:20:05,276 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 21:20:05,689 [INFO] Update id=549372415 is handled. Duration 312 ms by bot id=8168734935
+2025-07-12 21:20:05,702 [INFO] Update id=549372416 is handled. Duration 328 ms by bot id=8168734935
+2025-07-12 21:20:09,040 [INFO] Update id=549372417 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 21:20:39,433 [INFO] База данных инициализирована.
+2025-07-12 21:20:39,434 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-12 21:20:39,434 [INFO] Added job "partial" to job store "default"
+2025-07-12 21:20:39,436 [INFO] Scheduler started
+2025-07-12 21:20:39,436 [INFO] Планировщик напоминаний запущен.
+2025-07-12 21:20:39,437 [INFO] Бот запущен и ожидает команды.
+2025-07-12 21:20:39,437 [INFO] Start polling
+2025-07-12 21:20:39,765 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-12 21:20:40,160 [INFO] Update id=549372418 is handled. Duration 312 ms by bot id=8168734935
+2025-07-12 21:20:44,526 [INFO] Update id=549372419 is handled. Duration 110 ms by bot id=8168734935
+2025-07-12 21:21:07,577 [INFO] Update id=549372420 is handled. Duration 108 ms by bot id=8168734935
+2025-07-12 21:21:08,973 [INFO] Update id=549372421 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 21:21:10,342 [INFO] Update id=549372422 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 21:21:12,086 [INFO] Update id=549372423 is handled. Duration 125 ms by bot id=8168734935
+2025-07-12 21:21:13,483 [INFO] Неизвестная команда: /about
+2025-07-12 21:21:13,587 [INFO] Update id=549372424 is handled. Duration 109 ms by bot id=8168734935
+2025-07-12 21:21:15,561 [INFO] Неизвестная команда: /about
+2025-07-12 21:21:15,709 [INFO] Update id=549372425 is handled. Duration 156 ms by bot id=8168734935
+2025-07-12 21:21:39,448 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:22:39 MSK)" (scheduled at 2025-07-12 21:21:39.434807+03:00)
+2025-07-12 21:21:39,450 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:22:39 MSK)" executed successfully
+2025-07-12 21:21:51,782 [INFO] Неизвестная команда: /about
+2025-07-12 21:21:51,926 [INFO] Update id=549372426 is handled. Duration 141 ms by bot id=8168734935
+2025-07-12 21:22:39,436 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:23:39 MSK)" (scheduled at 2025-07-12 21:22:39.434807+03:00)
+2025-07-12 21:22:39,438 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:23:39 MSK)" executed successfully
+2025-07-12 21:23:39,435 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:24:39 MSK)" (scheduled at 2025-07-12 21:23:39.434807+03:00)
+2025-07-12 21:23:39,437 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:24:39 MSK)" executed successfully
+2025-07-12 21:24:39,444 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:25:39 MSK)" (scheduled at 2025-07-12 21:24:39.434807+03:00)
+2025-07-12 21:24:39,446 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:25:39 MSK)" executed successfully
+2025-07-12 21:25:39,438 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:26:39 MSK)" (scheduled at 2025-07-12 21:25:39.434807+03:00)
+2025-07-12 21:25:39,440 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-12 21:26:39 MSK)" executed successfully
+2025-07-12 21:26:36,774 [INFO] Polling stopped
+2025-07-12 21:26:37,041 [INFO] Polling stopped for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
