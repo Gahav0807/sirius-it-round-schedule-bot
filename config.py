@@ -4,7 +4,7 @@ from aiogram import Bot
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
 
-BOT_TOKEN = "8168734935:AAGH8q96wBmgDqk_UdtTwETRCwQnJyVb-QQ"
+BOT_TOKEN = ""
 DB_NAME = "events.db"  # Имя файла базы данных
 
 # Создать папку logs, если нет

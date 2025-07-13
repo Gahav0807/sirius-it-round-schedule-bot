@@ -10,14 +10,21 @@ scheduler = AsyncIOScheduler()
 # Отправка напоминаний пользователям
 async def send_reminders(bot: Bot) -> None:
     """
-    Отправляет напоминания пользователям о предстоящих событиях.
+    Отправляет напоминания пользователям о предстоящих событиях (только один раз).
     """
+    from db import set_events_reminded  # импорт внутри функции, чтобы избежать циклических импортов
     events = await get_events_for_reminder()
-    for user_id, title in events:
+    # Группируем по пользователю для массового обновления
+    user_events = {}
+    for user_id, event_id, title in events:
         try:
             await bot.send_message(user_id, f"🔔 Напоминание: {title} через час!")
         except Exception as e:
             logging.error(f"Ошибка отправки напоминания пользователю {user_id}: {e}")
+        user_events.setdefault(user_id, []).append(event_id)
+    # После отправки обновляем статус событий на 'reminded'
+    for user_id, event_ids in user_events.items():
+        await set_events_reminded(event_ids, user_id)
 
 # Запуск планировщика напоминаний
 def setup_scheduler(bot: Bot) -> None:

@@ -1,0 +1,215 @@
+2025-07-13 15:00:11,187 [INFO] База данных инициализирована.
+2025-07-13 15:00:11,191 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-13 15:00:11,193 [INFO] Added job "partial" to job store "default"
+2025-07-13 15:00:11,193 [INFO] Scheduler started
+2025-07-13 15:00:11,194 [INFO] Планировщик напоминаний запущен.
+2025-07-13 15:00:11,194 [INFO] Бот запущен и ожидает команды.
+2025-07-13 15:00:11,194 [INFO] Start polling
+2025-07-13 15:00:11,469 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-13 15:00:11,874 [INFO] Update id=549372560 is handled. Duration 312 ms by bot id=8168734935
+2025-07-13 15:00:28,176 [INFO] Update id=549372561 is handled. Duration 155 ms by bot id=8168734935
+2025-07-13 15:00:36,750 [INFO] Update id=549372562 is handled. Duration 172 ms by bot id=8168734935
+2025-07-13 15:01:01,106 [INFO] Update id=549372563 is handled. Duration 250 ms by bot id=8168734935
+2025-07-13 15:01:11,206 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:02:11 MSK)" (scheduled at 2025-07-13 15:01:11.191809+03:00)
+2025-07-13 15:01:11,212 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:02:11 MSK)" executed successfully
+2025-07-13 15:01:32,022 [INFO] Update id=549372564 is handled. Duration 187 ms by bot id=8168734935
+2025-07-13 15:01:38,564 [INFO] Update id=549372565 is handled. Duration 139 ms by bot id=8168734935
+2025-07-13 15:01:55,536 [INFO] Update id=549372566 is handled. Duration 125 ms by bot id=8168734935
+2025-07-13 15:02:11,206 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:03:11 MSK)" (scheduled at 2025-07-13 15:02:11.191809+03:00)
+2025-07-13 15:02:11,212 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:03:11 MSK)" executed successfully
+2025-07-13 15:02:35,564 [INFO] Update id=549372567 is handled. Duration 186 ms by bot id=8168734935
+2025-07-13 15:02:48,162 [INFO] Update id=549372568 is handled. Duration 1219 ms by bot id=8168734935
+2025-07-13 15:03:11,211 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:04:11 MSK)" (scheduled at 2025-07-13 15:03:11.191809+03:00)
+2025-07-13 15:03:11,214 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:04:11 MSK)" executed successfully
+2025-07-13 15:03:22,832 [INFO] Update id=549372569 is handled. Duration 156 ms by bot id=8168734935
+2025-07-13 15:03:27,413 [INFO] Update id=549372570 is handled. Duration 125 ms by bot id=8168734935
+2025-07-13 15:03:35,941 [INFO] Update id=549372571 is handled. Duration 125 ms by bot id=8168734935
+2025-07-13 15:03:49,979 [INFO] Update id=549372572 is handled. Duration 188 ms by bot id=8168734935
+2025-07-13 15:03:52,842 [INFO] Update id=549372573 is handled. Duration 141 ms by bot id=8168734935
+2025-07-13 15:04:02,022 [INFO] Update id=549372574 is handled. Duration 187 ms by bot id=8168734935
+2025-07-13 15:04:11,204 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:05:11 MSK)" (scheduled at 2025-07-13 15:04:11.191809+03:00)
+2025-07-13 15:04:11,208 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:05:11 MSK)" executed successfully
+2025-07-13 15:04:11,773 [INFO] Update id=549372575 is handled. Duration 125 ms by bot id=8168734935
+2025-07-13 15:04:34,421 [INFO] Update id=549372576 is handled. Duration 94 ms by bot id=8168734935
+2025-07-13 15:04:44,201 [INFO] Update id=549372577 is handled. Duration 125 ms by bot id=8168734935
+2025-07-13 15:04:47,661 [INFO] Update id=549372578 is handled. Duration 109 ms by bot id=8168734935
+2025-07-13 15:04:54,544 [INFO] Update id=549372579 is handled. Duration 109 ms by bot id=8168734935
+2025-07-13 15:05:06,112 [INFO] Update id=549372580 is handled. Duration 172 ms by bot id=8168734935
+2025-07-13 15:05:09,084 [INFO] Update id=549372581 is handled. Duration 187 ms by bot id=8168734935
+2025-07-13 15:05:11,195 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:06:11 MSK)" (scheduled at 2025-07-13 15:05:11.191809+03:00)
+2025-07-13 15:05:11,198 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:06:11 MSK)" executed successfully
+2025-07-13 15:05:21,279 [INFO] Update id=549372582 is handled. Duration 110 ms by bot id=8168734935
+2025-07-13 15:05:30,570 [INFO] Update id=549372583 is handled. Duration 108 ms by bot id=8168734935
+2025-07-13 15:06:11,200 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:07:11 MSK)" (scheduled at 2025-07-13 15:06:11.191809+03:00)
+2025-07-13 15:06:11,203 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:07:11 MSK)" executed successfully
+2025-07-13 15:07:11,211 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:08:11 MSK)" (scheduled at 2025-07-13 15:07:11.191809+03:00)
+2025-07-13 15:07:11,214 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:08:11 MSK)" executed successfully
+2025-07-13 15:08:11,204 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:09:11 MSK)" (scheduled at 2025-07-13 15:08:11.191809+03:00)
+2025-07-13 15:08:11,208 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:09:11 MSK)" executed successfully
+2025-07-13 15:09:11,194 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:10:11 MSK)" (scheduled at 2025-07-13 15:09:11.191809+03:00)
+2025-07-13 15:09:11,198 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:10:11 MSK)" executed successfully
+2025-07-13 15:10:11,206 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:11:11 MSK)" (scheduled at 2025-07-13 15:10:11.191809+03:00)
+2025-07-13 15:10:11,210 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:11:11 MSK)" executed successfully
+2025-07-13 15:11:11,215 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:12:11 MSK)" (scheduled at 2025-07-13 15:11:11.191809+03:00)
+2025-07-13 15:11:11,217 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:12:11 MSK)" executed successfully
+2025-07-13 15:12:11,201 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:13:11 MSK)" (scheduled at 2025-07-13 15:12:11.191809+03:00)
+2025-07-13 15:12:11,205 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:13:11 MSK)" executed successfully
+2025-07-13 15:13:11,198 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:14:11 MSK)" (scheduled at 2025-07-13 15:13:11.191809+03:00)
+2025-07-13 15:13:11,203 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:14:11 MSK)" executed successfully
+2025-07-13 15:14:02,858 [INFO] Polling stopped
+2025-07-13 15:14:03,105 [INFO] Polling stopped for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-13 15:14:06,990 [INFO] База данных инициализирована.
+2025-07-13 15:14:06,991 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-13 15:14:06,992 [INFO] Added job "partial" to job store "default"
+2025-07-13 15:14:06,992 [INFO] Scheduler started
+2025-07-13 15:14:06,992 [INFO] Планировщик напоминаний запущен.
+2025-07-13 15:14:06,993 [INFO] Бот запущен и ожидает команды.
+2025-07-13 15:14:06,993 [INFO] Start polling
+2025-07-13 15:14:07,293 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-13 15:14:08,054 [INFO] Polling stopped
+2025-07-13 15:14:08,310 [INFO] Polling stopped for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-13 15:19:15,905 [INFO] Поле status добавлено в таблицу events.
+2025-07-13 15:19:15,907 [INFO] База данных инициализирована.
+2025-07-13 15:19:15,908 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-13 15:19:15,909 [INFO] Added job "partial" to job store "default"
+2025-07-13 15:19:15,909 [INFO] Scheduler started
+2025-07-13 15:19:15,909 [INFO] Планировщик напоминаний запущен.
+2025-07-13 15:19:15,910 [INFO] Бот запущен и ожидает команды.
+2025-07-13 15:19:15,910 [INFO] Start polling
+2025-07-13 15:19:16,179 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-13 15:19:23,457 [INFO] Update id=549372584 is handled. Duration 359 ms by bot id=8168734935
+2025-07-13 15:19:33,818 [INFO] Update id=549372585 is handled. Duration 125 ms by bot id=8168734935
+2025-07-13 15:19:42,545 [INFO] Update id=549372586 is handled. Duration 139 ms by bot id=8168734935
+2025-07-13 15:19:44,355 [INFO] Update id=549372587 is handled. Duration 94 ms by bot id=8168734935
+2025-07-13 15:19:45,477 [INFO] Update id=549372588 is handled. Duration 110 ms by bot id=8168734935
+2025-07-13 15:19:56,766 [INFO] Update id=549372589 is handled. Duration 125 ms by bot id=8168734935
+2025-07-13 15:20:15,921 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:21:15 MSK)" (scheduled at 2025-07-13 15:20:15.908669+03:00)
+2025-07-13 15:20:15,927 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:21:15 MSK)" executed successfully
+2025-07-13 15:20:32,258 [INFO] Update id=549372590 is handled. Duration 140 ms by bot id=8168734935
+2025-07-13 15:20:42,231 [INFO] Update id=549372591 is handled. Duration 172 ms by bot id=8168734935
+2025-07-13 15:21:15,914 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:22:15 MSK)" (scheduled at 2025-07-13 15:21:15.908669+03:00)
+2025-07-13 15:21:15,917 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:22:15 MSK)" executed successfully
+2025-07-13 15:21:40,575 [INFO] Update id=549372592 is handled. Duration 108 ms by bot id=8168734935
+2025-07-13 15:21:45,265 [INFO] Update id=549372593 is handled. Duration 94 ms by bot id=8168734935
+2025-07-13 15:21:56,634 [INFO] Update id=549372594 is handled. Duration 155 ms by bot id=8168734935
+2025-07-13 15:21:58,924 [INFO] Update id=549372595 is handled. Duration 110 ms by bot id=8168734935
+2025-07-13 15:22:06,350 [INFO] Update id=549372596 is handled. Duration 140 ms by bot id=8168734935
+2025-07-13 15:22:09,101 [INFO] Update id=549372597 is handled. Duration 110 ms by bot id=8168734935
+2025-07-13 15:22:13,912 [INFO] Update id=549372598 is handled. Duration 219 ms by bot id=8168734935
+2025-07-13 15:22:15,917 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:23:15 MSK)" (scheduled at 2025-07-13 15:22:15.908669+03:00)
+2025-07-13 15:22:15,920 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:23:15 MSK)" executed successfully
+2025-07-13 15:22:16,660 [INFO] Update id=549372599 is handled. Duration 125 ms by bot id=8168734935
+2025-07-13 15:22:24,351 [INFO] Update id=549372600 is handled. Duration 125 ms by bot id=8168734935
+2025-07-13 15:22:47,362 [INFO] Update id=549372601 is handled. Duration 109 ms by bot id=8168734935
+2025-07-13 15:22:54,971 [INFO] Update id=549372602 is handled. Duration 110 ms by bot id=8168734935
+2025-07-13 15:23:15,922 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:24:15 MSK)" (scheduled at 2025-07-13 15:23:15.908669+03:00)
+2025-07-13 15:23:15,926 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:24:15 MSK)" executed successfully
+2025-07-13 15:23:17,051 [INFO] Update id=549372603 is handled. Duration 140 ms by bot id=8168734935
+2025-07-13 15:23:30,884 [INFO] Update id=549372604 is handled. Duration 94 ms by bot id=8168734935
+2025-07-13 15:23:39,036 [INFO] Update id=549372605 is handled. Duration 109 ms by bot id=8168734935
+2025-07-13 15:23:50,685 [INFO] Update id=549372606 is handled. Duration 110 ms by bot id=8168734935
+2025-07-13 15:24:15,913 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:25:15 MSK)" (scheduled at 2025-07-13 15:24:15.908669+03:00)
+2025-07-13 15:24:15,917 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:25:15 MSK)" executed successfully
+2025-07-13 15:25:15,923 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:26:15 MSK)" (scheduled at 2025-07-13 15:25:15.908669+03:00)
+2025-07-13 15:25:15,926 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:26:15 MSK)" executed successfully
+2025-07-13 15:26:15,918 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:27:15 MSK)" (scheduled at 2025-07-13 15:26:15.908669+03:00)
+2025-07-13 15:26:15,921 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:27:15 MSK)" executed successfully
+2025-07-13 15:27:15,912 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:28:15 MSK)" (scheduled at 2025-07-13 15:27:15.908669+03:00)
+2025-07-13 15:27:15,915 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:28:15 MSK)" executed successfully
+2025-07-13 15:28:15,929 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:29:15 MSK)" (scheduled at 2025-07-13 15:28:15.908669+03:00)
+2025-07-13 15:28:15,933 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:29:15 MSK)" executed successfully
+2025-07-13 15:29:15,924 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:30:15 MSK)" (scheduled at 2025-07-13 15:29:15.908669+03:00)
+2025-07-13 15:29:15,929 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:30:15 MSK)" executed successfully
+2025-07-13 15:30:15,916 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:31:15 MSK)" (scheduled at 2025-07-13 15:30:15.908669+03:00)
+2025-07-13 15:30:15,921 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:31:15 MSK)" executed successfully
+2025-07-13 15:31:15,919 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:32:15 MSK)" (scheduled at 2025-07-13 15:31:15.908669+03:00)
+2025-07-13 15:31:15,923 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:32:15 MSK)" executed successfully
+2025-07-13 15:32:15,916 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:33:15 MSK)" (scheduled at 2025-07-13 15:32:15.908669+03:00)
+2025-07-13 15:32:15,919 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:33:15 MSK)" executed successfully
+2025-07-13 15:33:15,924 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:34:15 MSK)" (scheduled at 2025-07-13 15:33:15.908669+03:00)
+2025-07-13 15:33:15,926 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:34:15 MSK)" executed successfully
+2025-07-13 15:34:15,919 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:35:15 MSK)" (scheduled at 2025-07-13 15:34:15.908669+03:00)
+2025-07-13 15:34:15,921 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:35:15 MSK)" executed successfully
+2025-07-13 15:35:15,912 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:36:15 MSK)" (scheduled at 2025-07-13 15:35:15.908669+03:00)
+2025-07-13 15:35:15,915 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:36:15 MSK)" executed successfully
+2025-07-13 15:36:15,929 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:37:15 MSK)" (scheduled at 2025-07-13 15:36:15.908669+03:00)
+2025-07-13 15:36:15,931 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:37:15 MSK)" executed successfully
+2025-07-13 15:37:15,921 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:38:15 MSK)" (scheduled at 2025-07-13 15:37:15.908669+03:00)
+2025-07-13 15:37:15,923 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:38:15 MSK)" executed successfully
+2025-07-13 15:38:15,923 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:39:15 MSK)" (scheduled at 2025-07-13 15:38:15.908669+03:00)
+2025-07-13 15:38:15,926 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:39:15 MSK)" executed successfully
+2025-07-13 15:39:15,908 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:40:15 MSK)" (scheduled at 2025-07-13 15:39:15.908669+03:00)
+2025-07-13 15:39:15,910 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:40:15 MSK)" executed successfully
+2025-07-13 15:40:15,925 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:41:15 MSK)" (scheduled at 2025-07-13 15:40:15.908669+03:00)
+2025-07-13 15:40:15,928 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:41:15 MSK)" executed successfully
+2025-07-13 15:41:15,934 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:42:15 MSK)" (scheduled at 2025-07-13 15:41:15.908669+03:00)
+2025-07-13 15:41:15,936 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:42:15 MSK)" executed successfully
+2025-07-13 15:42:15,916 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:43:15 MSK)" (scheduled at 2025-07-13 15:42:15.908669+03:00)
+2025-07-13 15:42:15,919 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:43:15 MSK)" executed successfully
+2025-07-13 15:43:15,918 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:44:15 MSK)" (scheduled at 2025-07-13 15:43:15.908669+03:00)
+2025-07-13 15:43:15,920 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:44:15 MSK)" executed successfully
+2025-07-13 15:44:15,917 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:45:15 MSK)" (scheduled at 2025-07-13 15:44:15.908669+03:00)
+2025-07-13 15:44:15,920 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:45:15 MSK)" executed successfully
+2025-07-13 15:45:15,911 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:46:15 MSK)" (scheduled at 2025-07-13 15:45:15.908669+03:00)
+2025-07-13 15:45:15,914 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:46:15 MSK)" executed successfully
+2025-07-13 15:46:15,921 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:47:15 MSK)" (scheduled at 2025-07-13 15:46:15.908669+03:00)
+2025-07-13 15:46:15,925 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:47:15 MSK)" executed successfully
+2025-07-13 15:47:15,909 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:48:15 MSK)" (scheduled at 2025-07-13 15:47:15.908669+03:00)
+2025-07-13 15:47:15,911 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:48:15 MSK)" executed successfully
+2025-07-13 15:47:28,921 [INFO] Update id=549372607 is handled. Duration 280 ms by bot id=8168734935
+2025-07-13 15:48:15,913 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:49:15 MSK)" (scheduled at 2025-07-13 15:48:15.908669+03:00)
+2025-07-13 15:48:15,916 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:49:15 MSK)" executed successfully
+2025-07-13 15:48:29,139 [INFO] Update id=549372608 is handled. Duration 109 ms by bot id=8168734935
+2025-07-13 15:49:15,925 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:50:15 MSK)" (scheduled at 2025-07-13 15:49:15.908669+03:00)
+2025-07-13 15:49:16,024 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:50:15 MSK)" executed successfully
+2025-07-13 15:50:11,736 [INFO] Update id=549372609 is handled. Duration 188 ms by bot id=8168734935
+2025-07-13 15:50:15,917 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:51:15 MSK)" (scheduled at 2025-07-13 15:50:15.908669+03:00)
+2025-07-13 15:50:16,233 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:51:15 MSK)" executed successfully
+2025-07-13 15:50:54,085 [INFO] Update id=549372610 is handled. Duration 187 ms by bot id=8168734935
+2025-07-13 15:51:15,923 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:52:15 MSK)" (scheduled at 2025-07-13 15:51:15.908669+03:00)
+2025-07-13 15:51:16,198 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:52:15 MSK)" executed successfully
+2025-07-13 15:52:15,909 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:53:15 MSK)" (scheduled at 2025-07-13 15:52:15.908669+03:00)
+2025-07-13 15:52:16,397 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:53:15 MSK)" executed successfully
+2025-07-13 15:53:15,920 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:54:15 MSK)" (scheduled at 2025-07-13 15:53:15.908669+03:00)
+2025-07-13 15:53:16,036 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:54:15 MSK)" executed successfully
+2025-07-13 15:54:15,916 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:55:15 MSK)" (scheduled at 2025-07-13 15:54:15.908669+03:00)
+2025-07-13 15:54:15,918 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:55:15 MSK)" executed successfully
+2025-07-13 15:55:15,912 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:56:15 MSK)" (scheduled at 2025-07-13 15:55:15.908669+03:00)
+2025-07-13 15:55:15,915 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 15:56:15 MSK)" executed successfully
+2025-07-13 15:58:25,880 [INFO] База данных инициализирована.
+2025-07-13 15:58:25,880 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-13 15:58:25,881 [INFO] Added job "partial" to job store "default"
+2025-07-13 15:58:25,881 [INFO] Scheduler started
+2025-07-13 15:58:25,881 [INFO] Планировщик напоминаний запущен.
+2025-07-13 15:58:25,882 [INFO] Бот запущен и ожидает команды.
+2025-07-13 15:58:25,882 [INFO] Start polling
+2025-07-13 15:58:26,133 [INFO] Run polling for bot @sirius_itroundd_schedule_bot id=8168734935 - 'IT-Round Schedule Bot'
+2025-07-13 15:59:25,892 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:00:25 MSK)" (scheduled at 2025-07-13 15:59:25.880906+03:00)
+2025-07-13 15:59:25,895 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:00:25 MSK)" executed successfully
+2025-07-13 15:59:29,475 [INFO] Update id=549372611 is handled. Duration 282 ms by bot id=8168734935
+2025-07-13 16:00:25,883 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:01:25 MSK)" (scheduled at 2025-07-13 16:00:25.880906+03:00)
+2025-07-13 16:00:26,029 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:01:25 MSK)" executed successfully
+2025-07-13 16:01:25,884 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:02:25 MSK)" (scheduled at 2025-07-13 16:01:25.880906+03:00)
+2025-07-13 16:01:25,892 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:02:25 MSK)" executed successfully
+2025-07-13 16:02:25,887 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:03:25 MSK)" (scheduled at 2025-07-13 16:02:25.880906+03:00)
+2025-07-13 16:02:25,890 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:03:25 MSK)" executed successfully
+2025-07-13 16:03:25,894 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:04:25 MSK)" (scheduled at 2025-07-13 16:03:25.880906+03:00)
+2025-07-13 16:03:25,896 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:04:25 MSK)" executed successfully
+2025-07-13 16:04:25,899 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:05:25 MSK)" (scheduled at 2025-07-13 16:04:25.880906+03:00)
+2025-07-13 16:04:25,902 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:05:25 MSK)" executed successfully
+2025-07-13 16:05:25,890 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:06:25 MSK)" (scheduled at 2025-07-13 16:05:25.880906+03:00)
+2025-07-13 16:05:25,894 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:06:25 MSK)" executed successfully
+2025-07-13 16:06:25,895 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:07:25 MSK)" (scheduled at 2025-07-13 16:06:25.880906+03:00)
+2025-07-13 16:06:25,900 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:07:25 MSK)" executed successfully
+2025-07-13 16:07:25,889 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:08:25 MSK)" (scheduled at 2025-07-13 16:07:25.880906+03:00)
+2025-07-13 16:07:25,893 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:08:25 MSK)" executed successfully
+2025-07-13 16:08:25,895 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:09:25 MSK)" (scheduled at 2025-07-13 16:08:25.880906+03:00)
+2025-07-13 16:08:25,899 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:09:25 MSK)" executed successfully
+2025-07-13 16:09:25,886 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:10:25 MSK)" (scheduled at 2025-07-13 16:09:25.880906+03:00)
+2025-07-13 16:09:25,890 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:10:25 MSK)" executed successfully
+2025-07-13 16:10:25,883 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:11:25 MSK)" (scheduled at 2025-07-13 16:10:25.880906+03:00)
+2025-07-13 16:10:25,886 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:11:25 MSK)" executed successfully
+2025-07-13 16:11:25,892 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:12:25 MSK)" (scheduled at 2025-07-13 16:11:25.880906+03:00)
+2025-07-13 16:11:25,896 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:12:25 MSK)" executed successfully
+2025-07-13 16:12:25,883 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:13:25 MSK)" (scheduled at 2025-07-13 16:12:25.880906+03:00)
+2025-07-13 16:12:25,887 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:13:25 MSK)" executed successfully

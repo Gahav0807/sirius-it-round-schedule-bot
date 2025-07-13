@@ -128,9 +128,10 @@ async def add_event(user_id: int, title: str, date: str, time: str, tag: str = "
         logging.error(f"Ошибка добавления события: {e}")
 
 # Получить события, пользователей которых надо напомнить о них (гибко по remind_before)
-async def get_events_for_reminder() -> List[Tuple[int, str]]:
+async def get_events_for_reminder() -> List[Tuple[int, int, str]]:
     """
-    Получает события, по которым нужно отправить напоминание.
+    Получает события, по которым нужно отправить напоминание (только один раз).
+    Возвращает: (user_id, event_id, title)
     """
     try:
         now = datetime.now()
@@ -149,7 +150,7 @@ async def get_events_for_reminder() -> List[Tuple[int, str]]:
             for user_id in all_users:
                 if user_id not in user_remind:
                     user_remind[user_id] = 60
-            # Собираем события для напоминания
+            # Собираем события для напоминания (только те, у которых status='active')
             result = []
             for user_id, remind_before in user_remind.items():
                 target_time = now + timedelta(minutes=remind_before)
@@ -157,15 +158,33 @@ async def get_events_for_reminder() -> List[Tuple[int, str]]:
                 time_from = (target_time - timedelta(minutes=1)).strftime("%H:%M")
                 time_to = (target_time + timedelta(minutes=1)).strftime("%H:%M")
                 cursor = await db.execute(
-                    "SELECT title FROM events WHERE user_id=? AND date=? AND time BETWEEN ? AND ?",
+                    "SELECT id, title FROM events WHERE user_id=? AND date=? AND time BETWEEN ? AND ? AND (status IS NULL OR status='active')",
                     (user_id, date_str, time_from, time_to)
                 )
                 for row in await cursor.fetchall():
-                    result.append((user_id, row[0]))
+                    event_id, title = row
+                    result.append((user_id, event_id, title))
             return result
     except Exception as e:
         logging.error(f"Ошибка получения событий для напоминания: {e}")
         return []
+
+# Массово обновить статус событий на 'reminded'
+async def set_events_reminded(event_ids: list[int], user_id: int) -> None:
+    """
+    Устанавливает статус 'reminded' для списка событий пользователя.
+    """
+    if not event_ids:
+        return
+    try:
+        async with aiosqlite.connect(DB_NAME) as db:
+            await db.executemany(
+                "UPDATE events SET status='reminded' WHERE id=? AND user_id=?",
+                [(eid, user_id) for eid in event_ids]
+            )
+            await db.commit()
+    except Exception as e:
+        logging.error(f"Ошибка массового обновления статуса событий: {e}")
 
 # Получить все события пользователя на дату (теперь возвращает tag)
 async def get_events_for_date(date: str, user_id: int) -> List[Tuple[str, str, str]]:
