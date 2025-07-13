@@ -82,6 +82,13 @@ ADD_TITLE_ERROR: Final[str] = "Укажите название события."
 ADD_DATA_ERROR: Final[str] = "Недостаточно данных"
 ADD_OK: Final[str] = "✅ Задача успешно добавлена!"
 
+@router.message(Command("start"))
+async def about_cmd(message: types.Message) -> None:
+    """
+    Отправляет приветственное сообщение и информацию о боте.
+    """
+    await message.answer(ABOUT_TEXT)
+
 @router.message(Command("help"))
 async def help_cmd(message: types.Message) -> None:
     """
@@ -103,13 +110,6 @@ async def help_cmd(message: types.Message) -> None:
         "\n\n🎨 Поддерживаются теги: учеба, досуг, спорт, важное (цветовая маркировка)."
     )
     await message.answer(help_text)
-
-@router.message(Command("start"))
-async def about_cmd(message: types.Message) -> None:
-    """
-    Отправляет приветственное сообщение и информацию о боте.
-    """
-    await message.answer(ABOUT_TEXT)
 
 @router.message(Command("schedule"))
 async def schedule_info(message: types.Message) -> None:
@@ -251,6 +251,23 @@ async def delete_cmd(message: types.Message) -> None:
     else:
         await message.answer(DELETE_FAIL)
 
+@router.message(Command("done"))
+async def done_cmd(message: types.Message) -> None:
+    """
+    Отмечает задачу как выполненную по её id.
+    """
+    user_id = message.from_user.id
+    args = message.text.split()
+    if len(args) != 2 or not args[1].isdigit():
+        await message.answer(DONE_USAGE)
+        return
+    event_id = int(args[1])
+    ok = await set_event_status(event_id, user_id, 'done')
+    if ok:
+        await message.answer(DONE_OK.format(id=event_id))
+    else:
+        await message.answer(DONE_FAIL)
+
 @router.message(Command("notify"))
 async def notify_cmd(message: types.Message) -> None:
     """
@@ -294,24 +311,7 @@ async def remind_cmd(message: types.Message) -> None:
     except Exception:
         await message.answer(REMIND_FAIL)
 
-@router.message(Command("done"))
-async def done_cmd(message: types.Message) -> None:
-    """
-    Отмечает задачу как выполненную по её id.
-    """
-    user_id = message.from_user.id
-    args = message.text.split()
-    if len(args) != 2 or not args[1].isdigit():
-        await message.answer(DONE_USAGE)
-        return
-    event_id = int(args[1])
-    ok = await set_event_status(event_id, user_id, 'done')
-    if ok:
-        await message.answer(DONE_OK.format(id=event_id))
-    else:
-        await message.answer(DONE_FAIL)
 
-# --- ОБНОВЛЯЕМ ВЫВОД ВСЕХ ЗАДАЧ ---
 @router.message(Command("alltasks"))
 async def alltasks_cmd(message: types.Message) -> None:
     """
