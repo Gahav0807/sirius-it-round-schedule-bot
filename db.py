@@ -6,6 +6,9 @@ from typing import List, Tuple, Optional
 
 # Инициализация базы данных (user_settings: добавлено remind_before)
 async def init_db() -> None:
+    """
+    Инициализирует базу данных и необходимые таблицы.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             await db.execute(
@@ -45,6 +48,9 @@ async def init_db() -> None:
 
 # Включить/отключить напоминания для пользователя
 async def set_notifications_enabled(user_id: int, enabled: bool) -> None:
+    """
+    Включает или отключает напоминания для пользователя.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             await db.execute(
@@ -58,6 +64,9 @@ async def set_notifications_enabled(user_id: int, enabled: bool) -> None:
 
 # Получить статус напоминаний пользователя
 async def get_notifications_enabled(user_id: int) -> bool:
+    """
+    Получает статус напоминаний пользователя.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             cursor = await db.execute(
@@ -72,6 +81,9 @@ async def get_notifications_enabled(user_id: int) -> bool:
 
 # Установить время напоминания (в минутах)
 async def set_remind_before(user_id: int, minutes: int) -> None:
+    """
+    Устанавливает время напоминания (в минутах) для пользователя.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             await db.execute(
@@ -85,6 +97,9 @@ async def set_remind_before(user_id: int, minutes: int) -> None:
 
 # Получить время напоминания пользователя (в минутах)
 async def get_remind_before(user_id: int) -> int:
+    """
+    Получает время напоминания пользователя (в минутах).
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             cursor = await db.execute(
@@ -99,6 +114,9 @@ async def get_remind_before(user_id: int) -> int:
 
 # Добавить событие в базу (с поддержкой тега)
 async def add_event(user_id: int, title: str, date: str, time: str, tag: str = "") -> None:
+    """
+    Добавляет событие в базу данных.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             await db.execute(
@@ -111,6 +129,9 @@ async def add_event(user_id: int, title: str, date: str, time: str, tag: str = "
 
 # Получить события, пользователей которых надо напомнить о них (гибко по remind_before)
 async def get_events_for_reminder() -> List[Tuple[int, str]]:
+    """
+    Получает события, по которым нужно отправить напоминание.
+    """
     try:
         now = datetime.now()
         async with aiosqlite.connect(DB_NAME) as db:
@@ -148,6 +169,9 @@ async def get_events_for_reminder() -> List[Tuple[int, str]]:
 
 # Получить все события пользователя на дату (теперь возвращает tag)
 async def get_events_for_date(date: str, user_id: int) -> List[Tuple[str, str, str]]:
+    """
+    Получает события пользователя на определённую дату.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             cursor = await db.execute(
@@ -162,6 +186,9 @@ async def get_events_for_date(date: str, user_id: int) -> List[Tuple[str, str, s
 
 # --- ДОБАВЛЯЕМ ПОЛЕ status В ТАБЛИЦУ events ---
 async def migrate_add_status_to_events():
+    """
+    Добавляет поле status в таблицу events, если его нет.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             try:
@@ -175,6 +202,9 @@ async def migrate_add_status_to_events():
 
 # --- УСТАНОВИТЬ СТАТУС ЗАДАЧИ ---
 async def set_event_status(event_id: int, user_id: int, status: str) -> bool:
+    """
+    Устанавливает статус задачи.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             await db.execute(
@@ -189,6 +219,9 @@ async def set_event_status(event_id: int, user_id: int, status: str) -> bool:
 
 # --- ПОЛУЧИТЬ СТАТУС ЗАДАЧИ ---
 async def get_event_status(event_id: int, user_id: int) -> str:
+    """
+    Получает статус задачи.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             cursor = await db.execute(
@@ -204,6 +237,9 @@ async def get_event_status(event_id: int, user_id: int) -> str:
 # --- ОБНОВЛЯЕМ ВЫБОРКИ: ДОБАВЛЯЕМ status ---
 # Получить все события пользователя на дату (с id)
 async def get_events_for_date_with_id(date: str, user_id: int) -> List[Tuple[int, str, str, str, str]]:
+    """
+    Получает события пользователя на дату с id и статусом.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             cursor = await db.execute(
@@ -218,6 +254,9 @@ async def get_events_for_date_with_id(date: str, user_id: int) -> List[Tuple[int
 
 # Удалить событие по id
 async def delete_event(event_id: int, user_id: int) -> bool:
+    """
+    Удаляет событие по id.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             cursor = await db.execute(
@@ -232,6 +271,9 @@ async def delete_event(event_id: int, user_id: int) -> bool:
 
 # Получить все события пользователя за всё время (с id)
 async def get_all_events_for_user(user_id: int) -> List[Tuple[int, str, str, str, str, str]]:
+    """
+    Получает все события пользователя за всё время.
+    """
     try:
         async with aiosqlite.connect(DB_NAME) as db:
             cursor = await db.execute(

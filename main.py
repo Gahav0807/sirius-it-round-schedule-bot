@@ -9,6 +9,9 @@ from schedule import setup_scheduler
 
 # Точка входа: инициализация БД, запуск планировщика и бота
 async def main() -> None:
+    """
+    Основная точка входа: инициализация базы данных, запуск планировщика и старт Telegram-бота.
+    """
     await migrate_add_status_to_events()  # миграция поля status
     await init_db()
     setup_scheduler(bot)

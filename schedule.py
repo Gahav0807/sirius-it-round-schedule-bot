@@ -9,6 +9,9 @@ scheduler = AsyncIOScheduler()
 
 # Отправка напоминаний пользователям
 async def send_reminders(bot: Bot) -> None:
+    """
+    Отправляет напоминания пользователям о предстоящих событиях.
+    """
     events = await get_events_for_reminder()
     for user_id, title in events:
         try:
@@ -18,6 +21,9 @@ async def send_reminders(bot: Bot) -> None:
 
 # Запуск планировщика напоминаний
 def setup_scheduler(bot: Bot) -> None:
+    """
+    Запускает планировщик напоминаний для Telegram-бота.
+    """
     scheduler.add_job(partial(send_reminders, bot), 'interval', minutes=1)
     scheduler.start()
     logging.info("Планировщик напоминаний запущен.")
