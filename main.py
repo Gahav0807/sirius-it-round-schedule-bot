@@ -12,7 +12,7 @@ async def main() -> None:
     """
     Основная точка входа: инициализация базы данных, запуск планировщика и старт Telegram-бота.
     """
-    await migrate_add_status_to_events()  # миграция поля status
+    await migrate_add_status_to_events()  # миграция поля status, отдельно от init_db т.к. новая тестовая функция
     await init_db()
     setup_scheduler(bot)
     dp = Dispatcher()

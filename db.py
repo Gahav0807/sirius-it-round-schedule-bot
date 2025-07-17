@@ -1,6 +1,7 @@
 import aiosqlite
 import logging
 from datetime import datetime, timedelta
+import zoneinfo
 from config import DB_NAME
 from typing import List, Tuple, Optional
 
@@ -134,7 +135,7 @@ async def get_events_for_reminder() -> List[Tuple[int, int, str]]:
     Возвращает: (user_id, event_id, title)
     """
     try:
-        now = datetime.now()
+        now = datetime.now(zoneinfo.ZoneInfo("Europe/Moscow"))
         async with aiosqlite.connect(DB_NAME) as db:
             # Получаем всех пользователей с напоминаниями
             cursor = await db.execute(

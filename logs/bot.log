@@ -213,3 +213,31 @@
 2025-07-13 16:11:25,896 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:12:25 MSK)" executed successfully
 2025-07-13 16:12:25,883 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:13:25 MSK)" (scheduled at 2025-07-13 16:12:25.880906+03:00)
 2025-07-13 16:12:25,887 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-13 16:13:25 MSK)" executed successfully
+2025-07-17 13:27:30,811 [INFO] База данных инициализирована.
+2025-07-17 13:27:30,814 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-17 13:27:30,817 [INFO] Added job "partial" to job store "default"
+2025-07-17 13:27:30,817 [INFO] Scheduler started
+2025-07-17 13:27:30,818 [INFO] Планировщик напоминаний запущен.
+2025-07-17 13:27:30,818 [INFO] Бот запущен и ожидает команды.
+2025-07-17 13:27:30,819 [INFO] Start polling
+2025-07-17 13:27:34,338 [INFO] Run polling for bot @tterstfar_bot id=7930771201 - 'test sirius'
+2025-07-17 13:28:30,829 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-17 13:29:30 MSK)" (scheduled at 2025-07-17 13:28:30.814431+03:00)
+2025-07-17 13:28:30,834 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-17 13:29:30 MSK)" executed successfully
+2025-07-17 13:28:45,901 [INFO] Update id=93392248 is handled. Duration 328 ms by bot id=7930771201
+2025-07-17 13:28:47,572 [INFO] Update id=93392249 is handled. Duration 139 ms by bot id=7930771201
+2025-07-17 13:28:49,356 [INFO] Update id=93392250 is handled. Duration 156 ms by bot id=7930771201
+2025-07-17 13:28:59,681 [INFO] Update id=93392251 is handled. Duration 250 ms by bot id=7930771201
+2025-07-17 13:29:19,786 [INFO] Update id=93392252 is handled. Duration 264 ms by bot id=7930771201
+2025-07-17 13:29:30,824 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-17 13:30:30 MSK)" (scheduled at 2025-07-17 13:29:30.814431+03:00)
+2025-07-17 13:29:31,095 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-17 13:30:30 MSK)" executed successfully
+2025-07-17 13:43:27,666 [INFO] База данных инициализирована.
+2025-07-17 13:43:27,668 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-07-17 13:43:27,669 [INFO] Added job "partial" to job store "default"
+2025-07-17 13:43:27,669 [INFO] Scheduler started
+2025-07-17 13:43:27,670 [INFO] Планировщик напоминаний запущен.
+2025-07-17 13:43:27,670 [INFO] Бот запущен и ожидает команды.
+2025-07-17 13:43:27,670 [INFO] Start polling
+2025-07-17 13:43:27,936 [INFO] Run polling for bot @tterstfar_bot id=7930771201 - 'test sirius'
+2025-07-17 13:43:44,765 [INFO] Update id=93392253 is handled. Duration 297 ms by bot id=7930771201
+2025-07-17 13:44:27,671 [INFO] Running job "partial (trigger: interval[0:01:00], next run at: 2025-07-17 13:45:27 MSK)" (scheduled at 2025-07-17 13:44:27.668372+03:00)
+2025-07-17 13:44:27,821 [INFO] Job "partial (trigger: interval[0:01:00], next run at: 2025-07-17 13:45:27 MSK)" executed successfully
