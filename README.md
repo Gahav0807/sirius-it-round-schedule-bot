@@ -110,10 +110,11 @@ Telegram-бот для студентов и преподавателей, ко�
 
 ## 📦 Зависимости
 
-- aiogram==3.7.0
-- aiosqlite
-- apscheduler
-- dateparser
+-aiogram==3.7.0
+-aiosqlite
+-apscheduler
+-dateparser
+-pytz
 
 (см. requirements.txt)
 
