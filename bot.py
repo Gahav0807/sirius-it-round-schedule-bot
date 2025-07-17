@@ -8,6 +8,7 @@ from db import (
     set_remind_before, get_remind_before, delete_event, get_events_for_date_with_id,
     get_all_events_for_user, set_event_status
 )
+from pytz import timezone
 
 router = Router()
 
@@ -50,11 +51,10 @@ def get_status_icon(status: str, event_date: str, event_time: str) -> str:
     """
     Возвращает смайлик-статус для задачи в зависимости от её статуса и времени.
     """
-    from datetime import datetime
     if status == 'done':
         return STATUS_ICONS['done']
-    dt = datetime.strptime(f"{event_date} {event_time}", "%Y-%m-%d %H:%M")
-    if status == 'overdue' or (status == 'active' and dt < datetime.now()):
+    dt = datetime.strptime(f"{event_date} {event_time}", "%Y-%m-%d %H:%M").replace(tzinfo=timezone("Europe/Moscow"))
+    if status == 'overdue' or (status == 'active' and dt < datetime.now(timezone("Europe/Moscow"))):
         return STATUS_ICONS['overdue']
     return STATUS_ICONS['active']
 
@@ -94,7 +94,7 @@ async def help_cmd(message: types.Message) -> None:
     """
     Отправляет пользователю справку по доступным командам.
     """
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(timezone("Europe/Moscow")).strftime("%Y-%m-%d")
     help_text = (
         "🧭 Доступные команды:\n"
         "/today — расписание на сегодня\n"
@@ -116,7 +116,7 @@ async def schedule_info(message: types.Message) -> None:
     """
     Отправляет пример добавления задачи и формат команды /add.
     """
-    now = datetime.now()
+    now = datetime.now(timezone("Europe/Moscow"))
     today = now.strftime("%Y-%m-%d")
     time = (now + timedelta(hours=2)).strftime("%H:%M")
     schedule_text = (
@@ -151,8 +151,8 @@ async def add_cmd(message: types.Message) -> None:
             title = " ".join(parts[:-2])
         if not title.strip():
             raise ValueError(ADD_TITLE_ERROR)
-        dt = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M")
-        if dt < datetime.now():
+        dt = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M").replace(tzinfo=timezone("Europe/Moscow"))
+        if dt < datetime.now(timezone("Europe/Moscow")):
             raise ValueError(ADD_PAST_ERROR)
     except ValueError as e:
         logging.warning(f"Ошибка валидации команды /add: {e}")
@@ -169,7 +169,7 @@ async def today_cmd(message: types.Message) -> None:
     Показывает список задач пользователя на сегодня.
     """
     try:
-        date_str = datetime.now().strftime("%Y-%m-%d")
+        date_str = datetime.now(timezone("Europe/Moscow")).strftime("%Y-%m-%d")
         events = await get_events_for_date_with_id(date_str, message.from_user.id)
         if not events:
             await message.answer(NO_EVENTS_TODAY)
@@ -190,7 +190,7 @@ async def tomorrow_cmd(message: types.Message) -> None:
     Показывает список задач пользователя на завтра.
     """
     try:
-        date_str = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
+        date_str = (datetime.now(timezone("Europe/Moscow")) + timedelta(days=1)).strftime("%Y-%m-%d")
         events = await get_events_for_date_with_id(date_str, message.from_user.id)
         if not events:
             await message.answer(NO_EVENTS_TOMORROW)
@@ -211,7 +211,7 @@ async def week_cmd(message: types.Message) -> None:
     Показывает задачи пользователя на ближайшую неделю.
     """
     try:
-        today = datetime.now()
+        today = datetime.now(timezone("Europe/Moscow"))
         found = False
         week_text = "📆 События на неделю:\n"
         for i in range(7):

@@ -4,8 +4,10 @@ from aiogram import Bot
 from db import get_events_for_reminder
 from typing import Any
 import logging
+from pytz import timezone
 
-scheduler = AsyncIOScheduler()
+# Указываем нужную временную зону для планировщика
+scheduler = AsyncIOScheduler(timezone=timezone("Europe/Moscow"))
 
 # Отправка напоминаний пользователям
 async def send_reminders(bot: Bot) -> None:

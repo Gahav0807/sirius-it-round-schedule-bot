@@ -1,7 +1,7 @@
 import aiosqlite
 import logging
 from datetime import datetime, timedelta
-import zoneinfo
+from pytz import timezone
 from config import DB_NAME
 from typing import List, Tuple, Optional
 
@@ -135,7 +135,7 @@ async def get_events_for_reminder() -> List[Tuple[int, int, str]]:
     Возвращает: (user_id, event_id, title)
     """
     try:
-        now = datetime.now(zoneinfo.ZoneInfo("Europe/Moscow"))
+        now = datetime.now(timezone("Europe/Moscow"))
         async with aiosqlite.connect(DB_NAME) as db:
             # Получаем всех пользователей с напоминаниями
             cursor = await db.execute(
@@ -159,11 +159,14 @@ async def get_events_for_reminder() -> List[Tuple[int, int, str]]:
                 time_from = (target_time - timedelta(minutes=1)).strftime("%H:%M")
                 time_to = (target_time + timedelta(minutes=1)).strftime("%H:%M")
                 cursor = await db.execute(
-                    "SELECT id, title FROM events WHERE user_id=? AND date=? AND time BETWEEN ? AND ? AND (status IS NULL OR status='active')",
+                    "SELECT id, title, date, time FROM events WHERE user_id=? AND date=? AND time BETWEEN ? AND ? AND (status IS NULL OR status='active')",
                     (user_id, date_str, time_from, time_to)
                 )
                 for row in await cursor.fetchall():
-                    event_id, title = row
+                    event_id, title, event_date, event_time = row
+                    # Парсим дату и время события как МСК
+                    event_dt = datetime.strptime(f"{event_date} {event_time}", "%Y-%m-%d %H:%M").replace(tzinfo=timezone("Europe/Moscow"))
+                    # Можно добавить дополнительные проверки, если нужно
                     result.append((user_id, event_id, title))
             return result
     except Exception as e:
